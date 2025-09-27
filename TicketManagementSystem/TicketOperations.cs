@@ -9,24 +9,29 @@ namespace TicketManagementSystem
 {
     internal class TicketOperations : ITicketOperations
     {
-        static string title="", description="";
-        static void getTicketDetails()
+        //static string title="", description="";
+        private (string title,string description)getTicketDetails()
         {
             Console.Write("Enter Ticket title: ");
-            title = Console.ReadLine();
+            var title = Console.ReadLine();
             Console.Write("Enter Ticket Description: ");
-            description = Console.ReadLine();
+            var description = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(description))
+            {
+                throw new Exception("Title or Description can't be null");
+            }
+            return (title, description);
         }
         public void CreateTicket()
         {
             TicketOperations obj = new TicketOperations();
             try
             {
-                getTicketDetails();
-                if (title == null || description == null)
-                {
-                    throw new Exception("Title or Description can't be null");
-                }
+                var(title,description) = getTicketDetails();
+                //if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(description))
+                //{
+                //    throw new Exception("Title or Description can't be null");
+                //}
                 Ticket ticket = new Ticket(title, description);
                 TicketStore.Tickets.Add(ticket);
                 Console.WriteLine($"Ticket Created successfully!\nGenerated ticket id: {ticket.TicketId}");
@@ -77,7 +82,7 @@ namespace TicketManagementSystem
                 }
                 else
                 {
-                    getTicketDetails();
+                    var (title,description) = getTicketDetails();
                     ticket.Title = title;
                     ticket.Description = description;
                 }
@@ -114,7 +119,7 @@ namespace TicketManagementSystem
                 {
                     throw new Exception("Ticket not found!!");
                 }
-                ticket.ShowDetails(ticketId);
+                ticket.ShowDetails();
             }
             catch (Exception exp)
             {

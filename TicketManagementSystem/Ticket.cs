@@ -44,16 +44,16 @@ namespace TicketManagementSystem
             Console.WriteLine($"Created At: {CreatedAt}");
             Console.WriteLine("---------------------------------\n");
         }
-        public void ShowDetails(string ticketId)
-        {
-            var ticket = TicketStore.Tickets.Find(t => t.TicketId == ticketId);
-            Console.WriteLine("---------------------------------");
-            Console.WriteLine($"TicketId     : {ticket.TicketId}");
-            Console.WriteLine($"Title     : {ticket.Title}");
-            Console.WriteLine($"Desc      : {ticket.Description}");
-            Console.WriteLine($"Status    : {ticket.Status}");
-            Console.WriteLine($"Created At: {ticket.CreatedAt}");
-            Console.WriteLine("---------------------------------\n");
-        }
+        //public void ShowDetails(string ticketId)
+        //{
+        //    var ticket = TicketStore.Tickets.Find(t => t.TicketId == ticketId);
+        //    Console.WriteLine("---------------------------------");
+        //    Console.WriteLine($"TicketId     : {ticket.TicketId}");
+        //    Console.WriteLine($"Title     : {ticket.Title}");
+        //    Console.WriteLine($"Desc      : {ticket.Description}");
+        //    Console.WriteLine($"Status    : {ticket.Status}");
+        //    Console.WriteLine($"Created At: {ticket.CreatedAt}");
+        //    Console.WriteLine("---------------------------------\n");
+        //}
     }
 }
