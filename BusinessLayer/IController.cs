@@ -1,7 +1,5 @@
 ﻿using Common;
-
-
-namespace TicketManagementSystem.Controllers
+namespace BusinessLayer
 {
     public interface IController
     {

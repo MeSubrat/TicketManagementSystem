@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Common
+﻿namespace Common.Lib
 {
     public class TicketInfo
     {
@@ -14,7 +8,7 @@ namespace Common
         public TicketStatus Status { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-        public TicketInfo(string Id, string title, string description,TicketStatus status)
+        public TicketInfo(string Id, string title, string description, TicketStatus status)
         {
             this.Id = Id;
             this.Title = title;

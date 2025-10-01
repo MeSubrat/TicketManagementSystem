@@ -1,12 +1,10 @@
-﻿using System;
-using System.Security.Cryptography.X509Certificates;
-using TicketManagementSystem.Controllers;
-using TicketManagementSystem.DB;
-using TicketManagementSystem.Model;
+﻿using Common;
+using BusinessLayer;
+using DBLayer;
 
-namespace TicketManagementSystem
+namespace Client
 {
-    internal class Client
+    internal class Program
     {
         private static void Menu()
         {
@@ -49,7 +47,7 @@ namespace TicketManagementSystem
                             ));
                             break;
                         case 2:
-                            List<TicketInfo> tickets  = controller.ViewAllTickets();
+                            List<TicketInfo> tickets = controller.ViewAllTickets();
                             foreach (var ticket in tickets)
                             {
                                 Console.WriteLine(ticket.ToString());
@@ -65,7 +63,7 @@ namespace TicketManagementSystem
                             TicketStatus updatedStatus = TicketStatus.Inprogress;
 
                             TicketInfo updatedTicket = new TicketInfo(ticketId, updatedTitle, updatedDescription, updatedStatus);
-                            controller.UpdateTicket(ticketId,updatedTicket);
+                            controller.UpdateTicket(ticketId, updatedTicket);
                             break;
                         case 4:
                             Console.Write("Enter Ticket Id to Search: ");
@@ -87,10 +85,11 @@ namespace TicketManagementSystem
                     }
                 }
             }
-            catch(Exception exp)
+            catch (Exception exp)
             {
                 Console.WriteLine($"Error: {exp}");
             }
         }
     }
 }
+
