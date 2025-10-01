@@ -1,9 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36511.14 d17.14
+VisualStudioVersion = 17.14.36511.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketManagementSystem", "TicketManagementSystem\TicketManagementSystem.csproj", "{C935E0F6-A180-4AE0-A5BB-73ED600BD110}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccessLayer", "DataAccessLayer", "{E578E37C-36FB-4163-9DC9-C183C05376A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{76BC56F8-B368-41EC-A809-F75DFCB24379}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{87840D56-5B42-4B61-BB8F-B1E13CE4388E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{CD2F6C5C-0964-4ABE-AC6A-CEFD21103512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{51F926F6-4B7D-4A13-827D-2F18C5AE59FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLayer", "DBLayer\DBLayer.csproj", "{8EC274B8-1BC8-498E-71C0-396BD135F5AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{BCB089AA-D24E-4DCC-BD29-8BC5711AD427}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +25,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C935E0F6-A180-4AE0-A5BB-73ED600BD110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C935E0F6-A180-4AE0-A5BB-73ED600BD110}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C935E0F6-A180-4AE0-A5BB-73ED600BD110}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C935E0F6-A180-4AE0-A5BB-73ED600BD110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2F6C5C-0964-4ABE-AC6A-CEFD21103512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2F6C5C-0964-4ABE-AC6A-CEFD21103512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2F6C5C-0964-4ABE-AC6A-CEFD21103512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2F6C5C-0964-4ABE-AC6A-CEFD21103512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51F926F6-4B7D-4A13-827D-2F18C5AE59FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F926F6-4B7D-4A13-827D-2F18C5AE59FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F926F6-4B7D-4A13-827D-2F18C5AE59FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F926F6-4B7D-4A13-827D-2F18C5AE59FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EC274B8-1BC8-498E-71C0-396BD135F5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC274B8-1BC8-498E-71C0-396BD135F5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC274B8-1BC8-498E-71C0-396BD135F5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC274B8-1BC8-498E-71C0-396BD135F5AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCB089AA-D24E-4DCC-BD29-8BC5711AD427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB089AA-D24E-4DCC-BD29-8BC5711AD427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB089AA-D24E-4DCC-BD29-8BC5711AD427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB089AA-D24E-4DCC-BD29-8BC5711AD427}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD2F6C5C-0964-4ABE-AC6A-CEFD21103512} = {87840D56-5B42-4B61-BB8F-B1E13CE4388E}
+		{51F926F6-4B7D-4A13-827D-2F18C5AE59FE} = {76BC56F8-B368-41EC-A809-F75DFCB24379}
+		{8EC274B8-1BC8-498E-71C0-396BD135F5AD} = {E578E37C-36FB-4163-9DC9-C183C05376A0}
+		{BCB089AA-D24E-4DCC-BD29-8BC5711AD427} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F8B4EC5-EB5B-43F1-A806-2BD1503AF3E5}

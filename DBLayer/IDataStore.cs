@@ -1,13 +1,12 @@
 ﻿using Common;
 
-
-namespace TicketManagementSystem.Controllers
+namespace DBLayer
 {
-    public interface IController
+    public interface IDataStore
     {
         bool CreateTicket(TicketInfo ticket);
         List<TicketInfo> ViewAllTickets();
-        bool DeleteTicket(string Id);
+        bool DeleteTicket(string ticketId);
         bool UpdateTicket(string ticketId, TicketInfo ticket);
         TicketInfo GetTicketInfoById(string ticketId);
     }
